@@ -14,25 +14,28 @@
     "build": "tsc -p ./ && cd app && rm -rf ./.next && next build && next export && yarn && pkg --targets node10-linux-x64,node10-macos-x64,node10-win-x64 --out-path ./bin . && rm -rf ./node_modules ./.next"
   },
   "dependencies": {
+    "@sup39/markdown-it": "^12.0.4-sup",
+    "@sup39/markdown-it-attrs": "^4.0.0-sup",
     "chart.js": "^2.7.3",
     "highlight.js": "^9.13.0",
     "log4js": "^3.0.6",
-    "markdown-it": "^9.0.1",
     "markdown-it-anchor": "^5.2.4",
+    "markdown-it-bracketed-spans": "^1.0.1",
+    "markdown-it-cjk-breaks": "^1.1.3",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-plantuml": "^1.3.0",
     "markdown-it-task-lists": "^2.1.1",
     "markdown-it-toc-done-right": "^4.0.1",
     "md-it-meta": "^0.0.2",
+    "msgpack-lite": "^0.1.26",
     "neovim": "^4.2.1",
     "next": "^7.0.2",
     "next-routes": "^1.4.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "socket.io": "^2.1.1",
-    "socket.io-client": "^2.1.1",
-    "msgpack-lite": "^0.1.26"
+    "socket.io-client": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "^10.11.7",

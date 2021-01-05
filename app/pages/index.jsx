@@ -1,7 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
 import io from 'socket.io-client'
-import MarkdownIt from 'markdown-it'
+import MarkdownIt from '@sup39/markdown-it'
+import markdownItAttrs from '@sup39/markdown-it-attrs';
+import markdownItBracket from 'markdown-it-bracketed-spans';
+import markdownItCjk from 'markdown-it-cjk-breaks';
 import hljs from 'highlight.js'
 import mkuml from 'markdown-it-plantuml'
 import emoji from 'markdown-it-emoji'
@@ -185,6 +188,9 @@ export default class PreviewPage extends React.Component {
         .use(markdownItToc, {
           listType: 'ul'
         })
+        .use(markdownItAttrs)
+        .use(markdownItBracket)
+        .use(markdownItCjk)
     }
     this.setState({
       cursor,
